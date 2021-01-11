@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+h3 {
+    margin-bottom: 7px;
+}
+
+#pocet_kg, #vyber_krmiva {
+    margin-right: 10px;
+}
+
+#cena_celkem, #k_utraceni {
+    margin-bottom: 7px;
+}
+
+#kontrola {
+    margin-right: 10px;
+}
+
+form {
+    border: solid grey 1px;
+    padding: 15px;
+    width: 80%;
+}
+
+#email_kontrola {
+    color: red;
+}
+

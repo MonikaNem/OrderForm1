@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="objednavka.css">
+</head>
+<body>
+    <h2>Objednávka</h2>
+    <form name="objednavkaformular">
+        <h3>Výběr krmiva</h3>
+        <label for="vyber_krmiva">Zvolte krmivo:</label>
+        <select name="vyber_krmiva" id="vyber_krmiva">
+            <option value="0">nevybráno</option>
+            <option value="150">Psí žrádlo</option>
+            <option value="120">Kočičí žrádlo</option>
+            <option value="50">Žrádlo pro rybičky</option>
+            <option value="800">Žrádlo pro tygra</option>
+        </select>
+        <label for="pocet_kg">Počet kg:</label>
+        <input type="text" name="pocet_kg" id="pocet_kg" size="2" value="0">
+        <label for="cena-za-krmivo">Cena:</label> 
+        <input type="text" name="cena_za_krmivo" id="cena_za_krmivo" size="10"> Kč
+        <br>
+
+        <h3>Požadované vlastnosti krmiva</h3>
+        <input type="checkbox" name="vlastnosti[]" class="vlastnosti_procentni" id="bio" value="0.3">
+        <label for="bio">Bio kvalita (příplatek 30 %)</label><br>
+        <input type="checkbox" name="vlastnosti[]" class="vlastnosti_procentni" id="premium" value="0.5">
+        <label for="premium">Extra premium kvalita (příplatek 50 %)</label><br>
+        <input type="checkbox" name="vlastnosti[]" class="vlastnosti_procentni" id="economy" value="-0.15">
+        <label for="economy">Extra nekvalita pro chudé (sleva 15 %)</label><br>
+        <input type="checkbox" name="vlastnosti[]" class="vlastnosti" id="darkove" value="500">
+        <label for="darkove">Dárkové balení (příplatek 500 Kč)</label><br>
+
+        <h3>Typ dopravy </h3>
+        <input type="radio" name="doprava" class="doprava" id="doprava_osobni" value="0">
+        <label for="doprava-osobni">Osobní odběr (0 Kč)</label><br>
+        <input type="radio" name="doprava" class="doprava" id="doprava_kuryr" value="0.1">
+        <label for="doprava-kuryr">Firemní kurýr (10 % z ceny)</label><br>
+        <input type="radio" name="doprava" class="doprava" id="doprava_posta" value="250">
+        <label for="doprava-posta">Česká pošta (250 Kč)</label><br>
+
+        <h3>Shrnutí</h3>
+        <label for="cena_celkem">Cena celkem:</label>
+        <input type="text" name="cena_celkem" id="cena_celkem" size="10"> Kč <br>
+        <label for="">Kolik můžete utratit?</label>
+        <input type="text" name="k_utraceni" id="k_utraceni" size="10" value=""> Kč
+        <input type="button" id="kontrola" value="Kontrola">
+        <span id="vyhodnoceniKontroly"></span><br>
+
+        <h3>Údaje o vás</h3>
+        <label for="email">Jméno: </label>
+        <input type="email" name="email" id="email"><span>@gmail.com</span>
+        <p id="email_kontrola"></p>
+
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="objednavka.js"></script>
+</body>
+</html>
